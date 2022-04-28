@@ -1,11 +1,3 @@
-<!--
- * @作者: gaowei
- * @页面: 
- * @最后修改人: gaowei
- * @Date: 2022-04-24 09:53:52
- * @LastEditTime: 2022-04-24 15:25:58
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +14,11 @@
             justify-content: space-around;
             align-items: center;
         }
+
         .BFC_Overflow {
             overflow: hidden;
         }
+
         .box {
             width: 200px;
             height: 200px;
@@ -42,7 +36,7 @@
         .box .box2 {
             width: 100px;
             height: 100px;
-            background: rgba(0, 255, 0,.4);
+            background: rgba(0, 255, 0, .4);
         }
 
         .box .box3 {
@@ -56,8 +50,9 @@
             height: 100px;
             background: #ff0;
         }
-        .float_left{
-            float:left
+
+        .float_left {
+            float: left
         }
     </style>
 </head>
@@ -69,7 +64,7 @@
             <div class="box1">
                 <!-- 导致父级盒子突出外边距 -->
                 <div style="margin: 20px;">父级盒子突出外边距</div>
-            </div> 
+            </div>
             <div class="box2">
                 <!-- 导致父级盒子突出外边距 -->
                 <div style="margin: 10px;">父级盒子突出外边距</div>
@@ -79,7 +74,7 @@
             <div class="box1" style="overflow: hidden;">
                 <!-- 解决外边距外放问题 -->
                 <div style="margin: 20px;">解决外边距外放问题</div>
-            </div> 
+            </div>
             <div class="box2" style="overflow: hidden;">
                 <!-- 解决外边距外放问题 -->
                 <div style="margin: 10px;">解决外边距外放问题</div>
@@ -90,43 +85,45 @@
     <p>demo2: 边距重叠</p>
     <div class="flex-container" id="demo2">
         <div class="box">
-            <!-- 边距重叠 --> 
+            <!-- 边距重叠 -->
             <div>
-                <div class="box1" style="margin-bottom: 10px;"> marg-t:10px </div> 
+                <div class="box1" style="margin-bottom: 10px;"> marg-t:10px </div>
             </div>
             <div>
                 <div class="box2" style="margin-top: 20px;"> marg-t:20px </div>
             </div>
-            <div style="position: absolute; bottom:-20px;height: 20px;left: 0;right: 0; background-color: rgba(0,0,0,.1);">
+            <div
+                style="position: absolute; bottom:-20px;height: 20px;left: 0;right: 0; background-color: rgba(0,0,0,.1);">
                 重叠导致下滑的区域 20px
             </div>
         </div>
         <div class="box">
             <div style="overflow: hidden;">
-                <div class="box1" style="margin-bottom: 10px;"> marg-t:10px </div> 
+                <div class="box1" style="margin-bottom: 10px;"> marg-t:10px </div>
             </div>
 
             <div style="overflow: hidden;">
                 <div class="box2" style="margin-top: 20px;"> marg-t:20px </div>
             </div>
-            <div style="position: absolute; bottom:-20px;height: 20px;left: 0;right: 0; background-color: rgba(0,0,0,.1);">
+            <div
+                style="position: absolute; bottom:-20px;height: 20px;left: 0;right: 0; background-color: rgba(0,0,0,.1);">
                 不重叠挤下来的 30px
             </div>
         </div>
     </div>
     <div style="margin-top: 50px;"></div>
     <p>demo3: 浮动失高</p>
-    <div class="box" style="height: auto;"> 
-        <div class="box1 float_left" > </div>                 
-        <div class="box2 float_left"> </div>           
-        <div class="box2 float_left"> </div> 
+    <div class="box" style="height: auto;">
+        <div class="box1 float_left"> </div>
+        <div class="box2 float_left"> </div>
+        <div class="box2 float_left"> </div>
     </div>
     <p>未清除的浮动或者不成立的BFC。会导致子元素祸害视图。</p>
     <p>demo3: BFC成立后</p>
     <div class="box BFC_Overflow" style="height: auto;">
-        <div class="box1 float_left" > </div>                 
-        <div class="box2 float_left"> </div>           
-        <div class="box2 float_left"> </div>  
+        <div class="box1 float_left"> </div>
+        <div class="box2 float_left"> </div>
+        <div class="box2 float_left"> </div>
         <!-- <div style="clear: both;"></div> -->
     </div>
 </body>
