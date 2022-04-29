@@ -16,7 +16,7 @@ mysql: create database [tableName] default character set utf8mb4 collate utf8mb4
 
 sequelize:
 ```js
-    config.dialectOptions = { // 数据库参数设置
+    config.dialectOptions = { // 数据库参数设置  好像没用  还是手动更新数据库字段/整个数据库的字符集 比较靠谱
         charset:"utf8mb4",
         collate:"utf8mb4_general_ci"
     },
